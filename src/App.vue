@@ -9,7 +9,7 @@ const text = '5184890136'
 const redirectUri = `${window.location.origin}/return_after_receive`
 
     const openLik = ()=>{
-        const url = `${prefix}transfer/${address}?amount=${amount}&text=${text}&redirect_uri=${encodeURIComponent(redirectUri)}`
+        const url = `${prefix}transfer/${address}?amount=${amount}&text=${text}`
         window.open(url, '_blank')
     }
 
