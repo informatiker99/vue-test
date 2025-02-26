@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 
-const prefix = 'ton://'
+const prefix = 'tonkeeper://'
 const amount = 0.01 * 1e9 
 const address=  'EQCTTadEYfaUNSyOBy9WXL4SZONkbj0gUg-YQiJrTAang7PB'
 const text = '5184890136'
