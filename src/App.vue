@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from 'vue'
+
 const prefix = 'ton://'
 const amount = 0.01 *1e9 
 const address=  'UQAsV3nfqjnd-yk9rMlhR1NSsoCjqYbdgJTFAutt-PRC1Gf-'
