@@ -1,32 +1,20 @@
 <script setup>
 import { onMounted } from 'vue'
 
-const prefix = 'tonkeeper://'
-const amount = 0.01 * 1e9 
-const address=  'EQCTTadEYfaUNSyOBy9WXL4SZONkbj0gUg-YQiJrTAang7PB'
-const text = '5184890136'
+const PREFIX = 'tonkeeper://'
+const AMOUNT = 0.01 * 1e9 
+const ADDRESS=  'EQCTTadEYfaUNSyOBy9WXL4SZONkbj0gUg-YQiJrTAang7PB'
+const TEXT = '5184890136'
 
 const redirectUri = `${window.location.origin}/return_after_receive`
 
     const openLik = ()=>{
-        const url = `${prefix}transfer/${address}?amount=${amount}&text=${text}`
+        const url = `${PREFIX}transfer/${ADDRESS}?amount=${AMOUNT}&text=${TEXT}`
 
-        window.open(url)
+        window.open(url, '_blank')
     }
 
-onMounted(() => {
-  const urlParams = new URLSearchParams(window.location.search)
-  const transactionHash = urlParams.get('transaction_hash')  
-  if(transactionHash){
 
-      console.log(transactionHash,'555');
-    }else{
-        console.log('no**');
-        
-    }
-
-  
-})
 </script>
 
 <template>
