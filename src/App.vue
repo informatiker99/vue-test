@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 
 const prefix = 'ton://'
 const amount = 0.01 * 1e9 
-const address=  'UQAsV3nfqjnd-yk9rMlhR1NSsoCjqYbdgJTFAutt-PRC1Gf-'
+const address=  'EQCTTadEYfaUNSyOBy9WXL4SZONkbj0gUg-YQiJrTAang7PB'
 const text = '5184890136'
 
 const redirectUri = `${window.location.origin}/return_after_receive`
