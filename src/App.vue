@@ -3,10 +3,27 @@ const prefix = 'ton://'
 const amount = 0.01 *1e9 
 const address=  'UQAsV3nfqjnd-yk9rMlhR1NSsoCjqYbdgJTFAutt-PRC1Gf-'
 const text = '5184890136'
+
+const redirectUri = `${window.location.origin}/return_after_receive`
+
     const openLik = ()=>{
-    window.open(`${prefix}/transfer/${address}?amount${amount}$text=${text}`)
+        const url = `${prefix}transfer/${address}?amount=${amount}&text=${text}&redirect_uri=${encodeURIComponent(redirectUri)}`
+        window.open(url, '_blank')
     }
 
+onMounted(() => {
+  const urlParams = new URLSearchParams(window.location.search)
+  const transactionHash = urlParams.get('transaction_hash')  
+  if(transactionHash){
+
+      console.log(transactionHash,'555');
+    }else{
+        console.log('no**');
+        
+    }
+
+  
+})
 </script>
 
 <template>
