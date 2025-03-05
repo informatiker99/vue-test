@@ -13,12 +13,22 @@ const redirectUri = `${window.location.origin}/return_after_receive`
 
         window.open(url)
     }
+const vibrate = ()=>{
+
+// چک کردن اینکه آیا دستگاه از ویبره پشتیبانی می‌کند یا نه
+if ("vibrate" in navigator) {
+    // ویبره به مدت 1000 میلی‌ثانیه (1 ثانیه)
+    navigator.vibrate(1000);
+} else {
+    console.log("ویبره پشتیبانی نمی‌شود.");
+}
+    }
 
 
 </script>
 
 <template>
-    <button @click="openLik">Connect</button>
+    <button @click="vibrate">Connect</button>
 </template>
 
 
